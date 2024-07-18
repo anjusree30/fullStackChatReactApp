@@ -13,7 +13,11 @@ const authToken=process.env.TWILIO_AUTH_TOKEN;
 const messagingServiceSid=process.env.TWILIO_MESSAGING_SERVICE_SID;
 const twilioClient=require('twilio')(accountSid,authToken);
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://voluble-pasca-3ddcaa.netlify.app', // Replace with your Netlify frontend domain
+    methods: 'GET, POST, PUT, DELETE', 
+    allowedHeaders: 'Content-Type, Authorization' 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
