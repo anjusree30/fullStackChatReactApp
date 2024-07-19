@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
     console.log(req.body);
     res.send('Hello World');
 });
-router.get('/anju', (req,res)=>{
+app.get('/anju', (req,res)=>{
     res.send("Anju Sre");
 });
 app.post('/',(req,res)=>{
