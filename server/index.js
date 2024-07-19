@@ -12,10 +12,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 const twilioClient = require('twilio')(accountSid, authToken);
 
-app.use(cors({
-    origin: 'http://localhost:3000', // Allow your frontend origin
-    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
