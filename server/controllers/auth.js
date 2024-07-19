@@ -9,6 +9,8 @@ const api_key = process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
 const app_id = process.env.STREAM_API_ID;
 
+
+
 const signup = async (req, res) => {
     try {
         console.log('Signup endpoint hit');
