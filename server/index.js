@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
     console.log(req.body);
     res.send('Hello World');
 });
-app.get('/anju', (req,res)=>{
-    res.send("Anju Sre");
-});
+// app.get('/anju', (req,res)=>{
+//     res.send("Anju Sre");
+// });
 app.post('/',(req,res)=>{
     const {message,user:sender,type,members}=req.body;
 
